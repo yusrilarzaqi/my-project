@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Menambah data mahasiswa</title>
+{% endblock %}
+
+
+{% block body %}
+
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-sm-12 text-center">
+			<h1>Tambah Mahasiswa</h1>
+			<hr />
+		</div>
+	</div>
+
+	<div class="row justify-content-center">
+		<div class="col-sm-8">
+			<form action="/add" method="post">
+				<div class="form-group">
+					<label for="nama">Nama</label>
+					<input
+						type="text"
+						name="nama"
+						id="nama"
+						class="form-control"
+						placeholder="Masukan nama"
+						required
+					/>
+				</div>
+				<div class="form-group">
+					<label for="telp">Kelas</label>
+					<input
+						type="text"
+						name="kelas"
+						id="kelas"
+						class="form-control"
+						placeholder="Masukan Kelas Anda"
+						required
+					/>
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						class="form-control"
+						placeholder="Masukan email"
+						required
+					/>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary btn-block">Tambah</button>
+				</div>
+			</form>
+		<button class="btn btn-danger btn-block" onclick="window.location.href='/'">Kembali</button>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
